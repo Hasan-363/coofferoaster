@@ -1,0 +1,80 @@
+.collection {
+  background-image: url("../../images/collection-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 196px;
+
+  @include tablet {
+    background-image: url('../../images/collection-tablet.png');
+   height: 120px;  
+   background-position-y:-35px;
+    
+  }
+  @include mobile{
+  background-image: url('../../images/collection-mobile.png');
+  height: 72px;
+  background-position-Y: 20px;
+  }
+  @include mobile-x{
+    background-position-x: 40px;
+  }
+  &__box {
+    max-width: 255px;
+    width: 100%;
+    text-align: center;
+    margin-top: 162px;
+    @include tablet{
+      display: flex;
+      align-items: center;
+      max-width: 573px;
+      width: 100%;
+      margin-top: 0px;
+    }
+    @include mobile{
+      flex-direction: column;
+      max-width: 282px;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-family: $fraunces_font;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: $text_hover;
+  }
+  &__text {
+    font-family: $barlow_font;
+    width: 255;
+    height: 78;
+    top: 56px;
+    opacity: 1;
+    padding-top: 24px;
+    @include mobile{
+      padding-top: 16px;
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+  &__card {
+    @include flex;
+    margin-top: 136px;
+    flex-wrap: wrap;
+    @include tablet{
+      justify-content: center;
+      margin-top: 144px;
+      padding-top: 48px;
+      row-gap: 32px;
+      
+    }
+    @include mobile{
+      row-gap: 48px;
+      padding-top: 90px;
+    }
+   
+  }
+  &__info {
+    padding-top: 71.55px;
+  }
+}
